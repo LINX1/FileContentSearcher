@@ -1,0 +1,9 @@
+This directory contains the Windows build of Antiword 0.37, distributed
+under the GNU General Public License.
+
+Antiword is a free MS Word document reader by Adri van Os. It is used here
+only to extract text from legacy binary .doc files. The original executable
+and character mapping files are distributed alongside this notice.
+
+Project information:
+https://github.com/grobian/antiword
