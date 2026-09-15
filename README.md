@@ -27,3 +27,33 @@ Windows 桌面文件内容搜索器，支持递归扫描文件夹、提取多种
 - 请保留 `_internal` 文件夹，否则程序无法正常启动。
 - 旧版 `.doc`、`.xls`、`.ppt` 的解析效果取决于本机安装的 Office/WPS/LibreOffice。
 - 大型文件夹首次扫描需要一定时间，程序会显示扫描和加载进度。
+
+## English
+
+### Overview
+
+FileContentSearcher is a Windows desktop full-text search tool. It recursively scans a selected folder, extracts text from supported files, and searches both file names and file contents with highlighted matches.
+
+### Usage
+
+1. Keep `FileContentSearcher.exe` and the `_internal` folder in the same directory.
+2. Run `FileContentSearcher.exe`.
+3. Select a folder and wait for scanning to finish.
+4. Enter a keyword to search. Select a result to view its content and highlighted matches.
+
+### Supported formats
+
+The application supports text and source files, PDF, DOC/DOCX, XLS/XLSX, PPT/PPTX, WPS, VSDX, ODT/ODS/ODP, EPUB, EML, SQLite, and text files inside some ZIP/JAR/WAR/APK containers.
+
+When available, Microsoft Office, WPS, and LibreOffice can be used as fallback parsers for legacy Office documents. Missing tools are disabled automatically, and installed tools can be unchecked to prevent their use.
+
+### Snapshots and logs
+
+- After scanning, `last_snapshot.json.gz` is saved next to the executable.
+- The application does not restore a snapshot automatically at startup. If a snapshot exists, click **Load Previous Snapshot** to restore it.
+- Loading failures, skipped files, and unsupported files are recorded in `load_errors.txt`.
+- Snapshots and logs are local runtime data and are not included in the release package.
+
+### Notes
+
+Keep the `_internal` folder next to the executable. Parsing results for legacy `.doc`, `.xls`, and `.ppt` files depend on the Office, WPS, or LibreOffice software installed on the computer.
